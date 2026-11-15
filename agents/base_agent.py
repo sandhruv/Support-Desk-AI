@@ -56,6 +56,27 @@ class AgentResult:
         }
 
 
+def personalize_reply(reply: str, repository, ticket: dict) -> str:
+    """Replace customer-name placeholders with the real first name."""
+    if not reply:
+        return reply
+    name = "there"
+    try:
+        user = repository.get_user(ticket.get("user_id"))
+        if user and user.get("name"):
+            name = str(user["name"]).split()[0]
+    except Exception:
+        pass
+    for placeholder in (
+        "[Customer Name]",
+        "{customer_name}",
+        "{Customer Name}",
+        "[Name]",
+    ):
+        reply = reply.replace(placeholder, name)
+    return reply
+
+
 class BaseAgent(ABC):
     """Common behaviour for every specialist agent."""
 

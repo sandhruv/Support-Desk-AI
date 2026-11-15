@@ -63,10 +63,10 @@ class ConversationMemory:
 
     def find_transaction_reference(self, ticket_id: str) -> Optional[str]:
         """Look back through the conversation for a TXN reference (follow-ups)."""
-        import re
+        from tools.billing_tools import extract_transaction_reference
 
         for item in reversed(self.get_history(ticket_id)):
-            match = re.search(r"\bTXN[0-9A-Z]+\b", item.get("message", ""), re.IGNORECASE)
-            if match:
-                return match.group(0).upper()
+            reference = extract_transaction_reference(item.get("message", ""))
+            if reference:
+                return reference
         return None

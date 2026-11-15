@@ -57,9 +57,15 @@ TOPIC_KEYWORDS = {
 
 
 def extract_transaction_reference(message: str) -> Optional[str]:
-    """Find a TXN reference such as TXN1001 inside the customer message."""
-    match = re.search(r"\bTXN[0-9A-Z]+\b", message or "", re.IGNORECASE)
-    return match.group(0).upper() if match else None
+    """Find a TXN reference such as TXN1001 (tolerant of spacing and typos)."""
+    text = message or ""
+    match = re.search(r"\bTXN\s*[-_]?\s*([0-9A-Z]{3,})\b", text, re.IGNORECASE)
+    if match:
+        return f"TXN{match.group(1).upper()}"
+    fuzzy = re.search(r"\b[tT][xXwW][xXnNmM]\s*[-_]?\s*(\d{3,})\b", text)
+    if fuzzy:
+        return f"TXN{fuzzy.group(1)}"
+    return None
 
 
 def check_billing_policy(topic: str = "") -> dict:

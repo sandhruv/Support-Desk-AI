@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 
-from agents.base_agent import AgentResult, BaseAgent
+from agents.base_agent import AgentResult, BaseAgent, personalize_reply
 from llm.groq_client import GroqNotConfiguredError, GroqServiceError
 from llm.model_config import AGENT_TECHNICAL
 from tools.technical_tools import TechnicalTools
@@ -99,15 +99,7 @@ class TechnicalAgent(BaseAgent):
             )
 
         # Replace any customer-name placeholders the model may leave behind.
-        customer_name = "there"
-        try:
-            user = self.repository.get_user(ticket.get("user_id"))
-            if user and user.get("name"):
-                customer_name = user["name"].split()[0]
-        except Exception:
-            pass
-        for placeholder in ("[Customer Name]", "{customer_name}", "{Customer Name}"):
-            reply = reply.replace(placeholder, customer_name)
+        reply = personalize_reply(reply, self.repository, ticket)
 
         # Guarantee an auditable citation footer from the retrieved sources.
         cited_titles = [

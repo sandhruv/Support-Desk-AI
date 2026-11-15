@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 
-from agents.base_agent import AgentResult, BaseAgent
+from agents.base_agent import AgentResult, BaseAgent, personalize_reply
 from llm.groq_client import GroqNotConfiguredError, GroqServiceError
 from llm.model_config import AGENT_ACCOUNT
 from tools.account_tools import AccountTools, extract_email
@@ -104,6 +104,8 @@ class AccountAgent(BaseAgent):
             error = "GROQ_API_KEY is not configured."
             needs_escalation = True
             escalation_reason = "Account Specialist requires the LLM service, which is not configured."
+
+        reply = personalize_reply(reply, self.repository, ticket)
 
         output = {
             "account_found": account.get("found", False),
