@@ -6,7 +6,7 @@
       <stop offset="1" stop-color="#22d3ee" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="url(#g)" />
+  <rect width="64" height="64" fill="url(#g)" />
   <path
     d="M15 19h28a6 6 0 0 1 6 6v11a6 6 0 0 1-6 6H28.6l-8 5.9c-1.1.8-2.6 0-2.6-1.4V42A6 6 0 0 1 12 36V25a6 6 0 0 1 6-6Z"
     fill="none"
