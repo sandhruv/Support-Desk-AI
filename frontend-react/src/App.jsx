@@ -67,7 +67,24 @@ export default function App() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">SD</div>
+          <div className="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path
+                d="M7.5 9.5h17A3.5 3.5 0 0 1 28 13v6.5a3.5 3.5 0 0 1-3.5 3.5h-9.1l-4.6 3.4c-.66.49-1.6.02-1.6-.8v-2.7A3.5 3.5 0 0 1 5 19.5V13a3.5 3.5 0 0 1 3.5-3.5Z"
+                stroke="#ffffff"
+                strokeWidth="2"
+                strokeLinejoin="round"
+              />
+              <circle cx="11.4" cy="16.2" r="1.35" fill="#ffffff" />
+              <circle cx="16" cy="16.2" r="1.35" fill="#ffffff" />
+              <circle cx="20.6" cy="16.2" r="1.35" fill="#ffffff" />
+              <path
+                d="M24.9 4.6l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1 1-2.4Z"
+                fill="#ffffff"
+                opacity="0.95"
+              />
+            </svg>
+          </div>
           <div>
             <div className="brand-name">Support Desk AI</div>
             <div className="brand-sub">CSE476 · Agentic AI</div>
