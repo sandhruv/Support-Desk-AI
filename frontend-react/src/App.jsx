@@ -106,8 +106,19 @@ export default function App() {
 
       <main className="content">
         <header className="page-head">
-          <h1>{page.label}</h1>
-          <p>{page.subtitle}</p>
+          <div>
+            <div className="eyebrow">{page.group} console</div>
+            <h1>{page.label}</h1>
+            <p>{page.subtitle}</p>
+          </div>
+          <div className="head-badges">
+            <span className={`pill ${health?.database_ok ? "ok" : "warn"}`}>
+              <span className="pill-dot" /> DB {health?.database_ok ? "online" : "offline"}
+            </span>
+            <span className={`pill ${health?.groq_configured ? "ok" : "warn"}`}>
+              <span className="pill-dot" /> Groq {health?.groq_configured ? "ready" : "offline"}
+            </span>
+          </div>
         </header>
         <PageComponent onNavigate={setActiveId} />
       </main>

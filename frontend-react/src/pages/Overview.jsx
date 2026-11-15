@@ -22,7 +22,7 @@ import {
   fmtDate,
 } from "../components.jsx";
 
-const COLORS = ["#2563eb", "#06b6d4", "#f59e0b", "#ef4444", "#8b5cf6", "#10b981"];
+const COLORS = ["#7c5cff", "#14b8a6", "#f59e0b", "#e11d48", "#0ea5e9", "#a855f7"];
 
 export default function Overview({ onNavigate }) {
   const [stats, setStats] = useState(null);
@@ -127,7 +127,7 @@ export default function Overview({ onNavigate }) {
                 <XAxis dataKey="name" tick={{ fontSize: 12 }} />
                 <YAxis allowDecimals={false} tick={{ fontSize: 12 }} width={30} />
                 <Tooltip />
-                <Bar dataKey="value" fill="#2563eb" radius={[6, 6, 0, 0]} maxBarSize={56} />
+                <Bar dataKey="value" fill="#7c5cff" radius={[6, 6, 0, 0]} maxBarSize={56} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -167,7 +167,7 @@ export default function Overview({ onNavigate }) {
                 <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
                 <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 11.5 }} />
                 <Tooltip />
-                <Bar dataKey="runs" fill="#06b6d4" radius={[0, 6, 6, 0]} maxBarSize={18} />
+                <Bar dataKey="runs" fill="#14b8a6" radius={[0, 6, 6, 0]} maxBarSize={18} />
               </BarChart>
             </ResponsiveContainer>
           </div>

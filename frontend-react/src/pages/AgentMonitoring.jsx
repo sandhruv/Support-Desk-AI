@@ -105,7 +105,7 @@ export default function AgentMonitoring() {
                 <XAxis type="number" allowDecimals={false} tick={{ fontSize: 12 }} />
                 <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 11.5 }} />
                 <Tooltip />
-                <Bar dataKey="runs" fill="#2563eb" radius={[0, 6, 6, 0]} maxBarSize={18} />
+                <Bar dataKey="runs" fill="#7c5cff" radius={[0, 6, 6, 0]} maxBarSize={18} />
               </BarChart>
             </ResponsiveContainer>
           </div>
