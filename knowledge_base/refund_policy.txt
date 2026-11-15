@@ -1,0 +1,30 @@
+Refund Policy - Support Desk Knowledge Base
+
+1. Scope
+This policy covers duplicate charges, failed payments and refund requests for
+subscription and one-time purchases.
+
+2. Duplicate charges
+If a customer was charged twice for the same purchase, support must collect the
+transaction reference (for example TXN1001). The billing team reviews duplicate
+charge reports within 5-7 business days. If the duplicate is confirmed, the
+extra charge is refunded to the original payment method. Support agents must
+never confirm an instant refund; they may confirm that the case is being
+investigated.
+
+3. Refund eligibility
+- The transaction must be in "completed" status.
+- The request must be made within 30 days of the charge.
+- Pending or failed transactions are not eligible until they settle.
+- Approved refunds appear on the original payment method within 5-7 business
+  days after approval. Refund approval is performed by the finance team.
+
+4. Invoice questions
+Invoices are generated at the start of each billing cycle and can be resent to
+the registered email address. Billing details can be updated in account
+settings.
+
+5. Escalation
+Escalate to human support when the transaction reference is missing, when the
+payment record cannot be found, when a chargeback is mentioned, or when the
+customer disputes a refund decision.

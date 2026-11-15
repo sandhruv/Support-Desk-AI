@@ -1,0 +1,30 @@
+Login Issues - Support Desk Knowledge Base
+
+Common login problems and safe troubleshooting steps.
+
+1. Application crashes on login
+- Ask the customer to update the application to the latest version.
+- Clear the application cache from Settings > Storage > Clear cache.
+- Restart the device and try logging in again.
+- If the crash continues on the latest version, collect the error code shown
+  on screen and escalate to the technical team.
+
+2. Login fails with an error message
+- Verify that Caps Lock is off and the email address is spelled correctly.
+- Use "Forgot password" to trigger a reset link. Reset links expire after 30
+  minutes.
+- Check spam/junk folders for the reset email.
+- Wait 15 minutes after five consecutive failed attempts; the account locks
+  temporarily as a security measure.
+
+3. Infinite loading screen
+- Force close and reopen the application.
+- Switch between Wi-Fi and mobile data to rule out network issues.
+- If the loading screen persists for more than 5 minutes, escalate with the
+  device model and app version.
+
+4. Session expired repeatedly
+- Sign out from all devices using the security settings page.
+- Change the password and sign in again.
+
+Security: support agents must never ask for passwords or one-time codes.

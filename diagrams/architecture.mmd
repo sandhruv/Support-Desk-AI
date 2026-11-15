@@ -1,0 +1,32 @@
+flowchart TD
+    C[Customer] -->|complaint| API[FastAPI Backend]
+    API --> MEM[(Supabase PostgreSQL<br/>tickets / conversations)]
+    API --> COORD[Support Coordinator<br/>Semantic Kernel]
+    COORD --> CLS[Classifier Agent]
+    CLS -->|keyword tool + Groq| VAL{Confidence >= 70%<br/>and category known?}
+    VAL -->|Yes: billing| BIL[Billing Specialist]
+    VAL -->|Yes: technical| TECH[Technical Specialist]
+    VAL -->|Yes: account| ACC[Account Specialist]
+    VAL -->|No: low confidence / other| ESC[Escalation Router]
+    BIL -->|lookup_payment_record<br/>check_billing_policy| MEM
+    TECH -->|search_knowledge_base<br/>validate_technical_solution| RAG[(pgvector<br/>knowledge_documents)]
+    ACC -->|lookup_customer_account<br/>validate_account_support_request| MEM
+    BIL --> RES{Resolved?}
+    TECH --> RES
+    ACC --> RES
+    RES -->|Yes| DONE[Customer reply<br/>ticket resolved]
+    RES -->|No| ESC
+    ESC -->|create_escalation_ticket| HUMAN[Human Support Queue]
+    HUMAN -->|verdict: resolve / reject / reassign| API
+    API --> DONE
+    CLS -. logs .-> LOGS[(agent_logs append-only)]
+    BIL -. logs .-> LOGS
+    TECH -. logs .-> LOGS
+    ACC -. logs .-> LOGS
+    ESC -. logs .-> LOGS
+    GROQ[Groq Cloud API<br/>free tier] --- CLS
+    GROQ --- BIL
+    GROQ --- TECH
+    GROQ --- ACC
+    GROQ --- ESC
+    UI[Streamlit Dashboard] <-->|REST| API

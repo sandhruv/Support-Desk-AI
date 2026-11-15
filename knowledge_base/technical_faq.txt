@@ -1,0 +1,31 @@
+Technical FAQ - Support Desk Knowledge Base
+
+Frequently asked technical questions and approved answers.
+
+Q1. The application crashes whenever I try to log in. What should I do?
+A. Update the application to the latest version, clear the app cache, restart
+the device, then try again. If the crash persists, note the error code and
+contact support.
+
+Q2. The page keeps loading forever after signing in.
+A. Force close the application, reopen it, and switch networks (Wi-Fi to
+mobile data). If the problem continues, report the device model and app
+version to support.
+
+Q3. I receive a "500 Internal Server Error" when saving data.
+A. Retry once after a minute. If the error persists, capture the timestamp and
+the action you were performing and escalate to the technical team.
+
+Q4. The application is very slow on my device.
+A. Ensure at least 1 GB of free storage, close background applications, and
+disable battery saver mode. Performance improves on devices with 4 GB RAM or
+more.
+
+Q5. Push notifications are not arriving.
+A. Check notification permissions in system settings, disable and re-enable
+notifications in the app, then restart the device.
+
+Q6. The application does not install or update.
+A. Check free storage, stable internet connection, and device compatibility
+(Android 10+ or iOS 15+). Uninstall the old version only after confirming the
+account email and password are available.

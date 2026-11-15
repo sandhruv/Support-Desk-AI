@@ -1,0 +1,32 @@
+Account Access - Support Desk Knowledge Base
+
+Account recovery and access guidance.
+
+1. Password reset
+Customers can reset their password from the login page using "Forgot
+password". A reset link is sent to the registered email address and expires
+after 30 minutes. Support must never ask the customer to share their password
+or one-time passcode.
+
+2. Locked accounts
+Accounts lock automatically after five failed login attempts for 15 minutes.
+If the lock persists, a human support agent must verify the customer's identity
+using the registered email and account history before unlocking.
+
+3. Email change requests
+Changing the registered email requires identity verification. Escalate to human
+support. Agents should never reveal whether an email address exists on the
+platform to an unverified requester.
+
+4. Two-factor authentication (2FA)
+If a customer loses access to their 2FA device, they must use a recovery code.
+If no recovery code is available, escalate for manual identity verification.
+
+5. Account deletion
+Account deletion is permanent and requires a written confirmation from the
+registered email address. Escalate to human support for processing.
+
+Security rules:
+- Never store plaintext passwords.
+- Never ask customers to share passwords.
+- Use the registered email on record for all recovery steps.

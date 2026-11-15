@@ -1,0 +1,26 @@
+Payment Troubleshooting - Support Desk Knowledge Base
+
+If a payment fails or shows an unexpected charge, follow these steps.
+
+Step 1 - Verify the transaction
+Ask for the transaction reference (TXNxxxx) and check the payment record.
+Compare the amount, currency and status with what the customer reports.
+
+Step 2 - Declined payments
+A failed payment usually means the bank declined the charge. Ask the customer
+to verify card details, expiry date and available balance, then retry. Declined
+transactions do not deduct money; the bank releases any temporary authorization
+hold within 3-5 business days.
+
+Step 3 - Duplicate charges
+If two completed charges exist for the same purchase, mark the case as a
+duplicate charge and follow the refund policy. Do not promise an instant refund.
+
+Step 4 - Missing records
+If no payment record exists for the provided reference, do not guess. Escalate
+the ticket to human support so the finance team can search the payment
+provider records.
+
+Step 5 - Communication
+Explain clearly what was checked, what the policy allows, and the next step.
+Never request full card numbers, CVV codes or passwords.

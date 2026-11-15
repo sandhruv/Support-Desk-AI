@@ -1,0 +1,40 @@
+# Secrets - never commit real credentials
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Logs and local artifacts
+logs/*.log
+logs/*.err.log
+logs/*.txt
+!logs/.gitkeep
+*.log
+
+# Model cache
+.cache/
+models/
+
+# Node / React dashboard
+node_modules/
+dist/
+.vite/
+
+# Local knowledge uploads
+knowledge_base/uploads/*
+!knowledge_base/uploads/.gitkeep
